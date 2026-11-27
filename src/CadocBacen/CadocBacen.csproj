@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>CadocBacen</RootNamespace>
+    <AssemblyName>CadocBacen</AssemblyName>
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <PackageId>CadocBacen</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Victor Condack</Authors>
+    <Description>BCB regulatory documents for .NET: Cosif account codes with check digits, trial balance roll-up and checks, documents 4010/4016 (Balancete and Balanço Patrimonial Analítico) XML with validation, diff and filing deadlines, and the SCR 3040 core with vencimento buckets. Output is byte-identical to cadoc-bacen-go.</Description>
+    <PackageTags>bcb;cadoc;cosif;4010;4016;scr;3040;regulatory;banking;brazil</PackageTags>
+    <RepositoryUrl>https://github.com/victorcondackdev/cadoc-bacen-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/victorcondackdev/cadoc-bacen-dotnet</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2026 Victor Condack</Copyright>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Cosif/sample_chart.csv" LogicalName="CadocBacen.sample_chart.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="CadocBacen.Tests" />
+  </ItemGroup>
+
+</Project>
