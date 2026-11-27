@@ -70,7 +70,7 @@ jobs:
           repository: victorcondackdev/cadoc-bacen-go
           path: cadoc-bacen-go
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: cadoc-bacen-go/go.mod
 
